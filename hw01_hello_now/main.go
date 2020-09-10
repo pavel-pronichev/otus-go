@@ -20,5 +20,4 @@ func main() {
 		`current time: %s
 exact time: %s
 `, now, t.Round(0))
-
 }
