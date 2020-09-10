@@ -9,9 +9,9 @@ import (
 )
 
 func main() {
-	t, err := ntp.Time("0.beevik-ntp.pool.ntp.org")
 	now := time.Now()
 
+	t, err := ntp.Time("0.beevik-ntp.pool.ntp.org")
 	if err != nil {
 		log.Fatalf(err.Error())
 	}
