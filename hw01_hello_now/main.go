@@ -9,8 +9,6 @@ import (
 )
 
 func main() {
-	now := time.Now()
-
 	t, err := ntp.Time("0.beevik-ntp.pool.ntp.org")
 	if err != nil {
 		log.Fatalf(err.Error())
@@ -19,5 +17,5 @@ func main() {
 	fmt.Printf(
 		`current time: %s
 exact time: %s
-`, now, t.Round(0))
+`, time.Now(), t.Round(0))
 }
