@@ -28,7 +28,7 @@ func Top10(str string) []string {
 		}
 	}
 
-	var prepList []wordCount
+	prepList := make([]wordCount, 0)
 	for w, c := range m {
 		prepList = append(prepList, wordCount{w, c})
 	}
@@ -37,7 +37,7 @@ func Top10(str string) []string {
 		return prepList[i].count > prepList[j].count
 	})
 
-	var result []string
+	result := make([]string, 10)
 	for i, wc := range prepList {
 		if wc.word == "-" {
 			continue
