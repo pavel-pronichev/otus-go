@@ -37,7 +37,7 @@ func Top10(str string) []string {
 		return prepList[i].count > prepList[j].count
 	})
 
-	result := make([]string, 10)
+	result := make([]string, 0)
 	for i, wc := range prepList {
 		if wc.word == "-" {
 			continue
